@@ -15,21 +15,18 @@ public class InterfazU {
     @FXML
     private AnchorPane ap_panes;
     @FXML
-    private JFXButton abrir,atras, atras1,atras11,atras1111, atras11111,btn_calServ,btn_consConfiguracion,btn_refrescarTips, btn_consRut,btn_crearCom,btn_prgRuta,btn_progRut,btn_upValCom, btn_buscarRecetas,btn_Recetas,cerrar;
+    private JFXButton abrir,atras, atras1,atras11,atras1111, atras11111,btn_calServ,btn_consConfiguracion,btn_refrescarTips,btn_verRecetas, btn_consRut,btn_crearCom,btn_prgRuta,btn_progRut,btn_subirReceta, btn_buscarRecetas,btn_Recetas,cerrar;
 
     @FXML
     private Pane pnl_tips,pnl_consRut,pnl_crearCom,pnl_menu,pnl_opacidad,pnl_progRut,pnl_recetas;
 
     @FXML
-    private JFXRadioButton rbtn_comNeg,rbtn_comPos;
-
-    @FXML
     private JFXTextArea txa_coment,txa_consRut,txa_progRut, txa_valCom;
 
     @FXML
-    private TextField txf_comID,txf_crearComBus,txf_crearComID,txf_crearComRut,txf_progHL,txf_progLL,txf_progNum;
+    private TextField txf_nombreRecetaSubir, txf_preparacionRecetaSubir, txf_ingredientesRecetaSubir,txf_crearComBus,txf_crearComID,txf_crearComRut,txf_progHL,txf_progLL,txf_progNum;
     @FXML
-    private Text txt_errorTips;
+    private Text txt_errorTips, txt_exitoRecetas, txt_errorRecetas;
     @FXML protected void onMenuButtonClick(ActionEvent event) {
         if(event.getSource() == abrir){
             pnl_opacidad.toFront();
@@ -82,6 +79,12 @@ public class InterfazU {
         /////////////////////////////////////////
         if(event.getSource() == btn_refrescarTips){
             txt_errorTips.setText("No hay mas tips que mostrar");
+        }
+        if(event.getSource() == btn_subirReceta){
+            txt_exitoRecetas.setText("Receta subida exitosamente");
+        }
+        if(event.getSource() == btn_verRecetas){
+            txt_errorRecetas.setText("No se han subido recetas");
         }
     }
 }
