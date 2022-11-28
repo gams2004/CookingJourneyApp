@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appcocina.implementacionfundamentosingsw.HelloController">
+   <children>
+
+      <TextField fx:id="usuario" layoutX="508.0" layoutY="227.0" prefHeight="39.0" prefWidth="326.0" promptText="Usuario">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="Iniciar" layoutX="537.0" layoutY="485.0" onAction="#iniciarsesion" prefHeight="73.0" prefWidth="268.0" style="-fx-background-color: #174020;" text="Iniciar sesion" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="contrasena" layoutX="508.0" layoutY="328.0" prefHeight="39.0" prefWidth="326.0" promptText="Contraseña">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <JFXTextArea fx:id="txa_iniciar" editable="false" focusColor="#405aa800" layoutX="484.0" layoutY="570.0" prefHeight="108.0" prefWidth="375.0" unFocusColor="#4d4d4d00">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextArea>
+      <ImageView fitHeight="122.0" fitWidth="246.0" layoutX="548.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LogoCookingJourneySolo.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0015ff" layoutX="537.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O crea una cuenta nueva" underline="true" wrappingWidth="500.416015625">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="537.0" layoutY="406.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="252.0" text="Button" textFill="TRANSPARENT" />
+      <JFXButton fx:id="crear" layoutX="534.0" layoutY="408.0" onAction="#crearCuenta" opacity="0.0" prefHeight="25.0" prefWidth="260.0" />
+   </children>
+</AnchorPane>

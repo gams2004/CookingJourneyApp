@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="436.0" prefWidth="565.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appcocina.implementacionfundamentosingsw.ControladorRegistroUsuario">
+   <children>
+      <TextField fx:id="contrasena_txf" layoutX="226.0" layoutY="117.0" />
+      <JFXButton fx:id="btn_registrarse" layoutX="227.0" layoutY="292.0" onAction="#registrarse" prefHeight="31.0" prefWidth="148.0" style="-fx-background-color: #174020;" text="Registrarse" textFill="WHITE" />
+      <TextField fx:id="usuario_txf" layoutX="226.0" layoutY="53.0" />
+      <TextField fx:id="correo_txf" layoutX="226.0" layoutY="175.0" />
+      <TextField fx:id="telefono_txf" layoutX="226.0" layoutY="238.0" />
+      <Text fill="WHITE" layoutX="71.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Usuario" />
+      <Text fill="WHITE" layoutX="115.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+      <Text fill="WHITE" layoutX="138.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" />
+      <Text fill="WHITE" layoutX="133.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono" />
+      <JFXTextArea fx:id="error_txt" layoutX="161.0" layoutY="341.0" prefHeight="95.0" prefWidth="280.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</AnchorPane>
