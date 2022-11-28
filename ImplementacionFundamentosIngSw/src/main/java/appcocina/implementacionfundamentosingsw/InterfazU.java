@@ -8,25 +8,25 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 
 public class InterfazU {
     @FXML
     private AnchorPane ap_panes;
     @FXML
-    private JFXButton abrir,atras, atras1,atras11,atras1111, atras11111,btn_calServ,btn_consConfiguracion, btn_consRut,btn_crearCom,btn_prgRuta,btn_progRut,btn_upValCom, btn_buscarRecetas, btn_upValCom1,btn_Recetas,cerrar;
+    private JFXButton abrir,atras, atras1,atras11,atras1111, atras11111,btn_calServ,btn_consConfiguracion,btn_refrescarTips,btn_verRecetas, btn_consRut,btn_crearCom,btn_prgRuta,btn_progRut,btn_subirReceta, btn_buscarRecetas,btn_Recetas,cerrar;
 
     @FXML
-    private Pane pnl_calServ,pnl_consRut,pnl_crearCom,pnl_menu,pnl_opacidad,pnl_progRut,pnl_recetas;
+    private Pane pnl_tips,pnl_consRut,pnl_crearCom,pnl_menu,pnl_opacidad,pnl_progRut,pnl_recetas;
 
     @FXML
-    private JFXRadioButton rbtn_comNeg,rbtn_valNeg,rbtn_comPos,rbtn_valPos;
+    private JFXTextArea txa_coment,txa_consRut,txa_progRut, txa_valCom;
 
     @FXML
-    private JFXTextArea txa_comVal, txa_coment,txa_consRut,txa_progRut, txa_valCom;
-
+    private TextField txf_nombreRecetaSubir, txf_preparacionRecetaSubir, txf_ingredientesRecetaSubir,txf_crearComBus,txf_crearComID,txf_crearComRut,txf_progHL,txf_progLL,txf_progNum;
     @FXML
-    private TextField txf_calID,txf_comID,txf_comID11,txf_crearComBus,txf_crearComID,txf_crearComRut,txf_progHL,txf_progLL,txf_progNum;
+    private Text txt_errorTips, txt_exitoRecetas, txt_errorRecetas;
     @FXML protected void onMenuButtonClick(ActionEvent event) {
         if(event.getSource() == abrir){
             pnl_opacidad.toFront();
@@ -42,7 +42,7 @@ public class InterfazU {
         }
         if(event.getSource() == btn_calServ){
             ap_panes.toFront();
-            pnl_calServ.toFront();
+            pnl_tips.toFront();
         }
         if(event.getSource() == btn_buscarRecetas){
             ap_panes.toFront();
@@ -77,17 +77,14 @@ public class InterfazU {
             ap_panes.toBack();
         }
         /////////////////////////////////////////
-        if(event.getSource() == btn_upValCom){
-            try{
-                if(txf_comID == null){
-                    throw new Exception();
-                }
-                else{
-
-                }
-            }catch(Exception e){
-                txa_valCom.setText("ID incorrecto");
-            }
+        if(event.getSource() == btn_refrescarTips){
+            txt_errorTips.setText("No hay mas tips que mostrar");
+        }
+        if(event.getSource() == btn_subirReceta){
+            txt_exitoRecetas.setText("Receta subida exitosamente");
+        }
+        if(event.getSource() == btn_verRecetas){
+            txt_errorRecetas.setText("No se han subido recetas");
         }
     }
 }
