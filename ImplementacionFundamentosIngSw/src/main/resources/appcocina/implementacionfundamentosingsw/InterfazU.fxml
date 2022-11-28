@@ -20,9 +20,47 @@
         <Pane fx:id="pnl_opacidad" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000; -fx-opacity: 0.3;" />
         <AnchorPane fx:id="ap_panes" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5e6bf;">
             <children>
-                <Pane fx:id="pnl_crearCom" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
+                <Pane fx:id="pnl_consRut" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
                     <children>
-                        <JFXButton fx:id="atras" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
+                      <Pane fx:id="pnl_crearCom" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
+                          <children>
+                              <JFXButton fx:id="atras" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
+                                  <graphic>
+                                      <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@download.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </JFXButton>
+                        <TextField fx:id="txf_crearComID" alignment="CENTER" layoutX="185.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="ID">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXTextArea fx:id="txa_coment" layoutX="408.0" layoutY="403.0" prefHeight="132.0" prefWidth="463.0" promptText="Comentario">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextArea>
+                        <TextField fx:id="txf_crearComRut" alignment="CENTER" layoutX="871.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="Ruta">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txf_crearComBus" alignment="CENTER" layoutX="556.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="Bus">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton fx:id="btn_upComent" layoutX="497.0" layoutY="590.0" onAction="#onMenuButtonClick" prefHeight="91.0" prefWidth="287.0" style="-fx-background-color: #174020;" text="Subir Receta" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                          </children>
+                      </Pane>
+                        <JFXButton fx:id="atras11" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="108.0" prefWidth="126.0" text=" ">
                             <graphic>
                                 <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -31,108 +69,12 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                  <TextField fx:id="txf_crearComID" alignment="CENTER" layoutX="185.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="ID">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <JFXTextArea fx:id="txa_coment" layoutX="408.0" layoutY="403.0" prefHeight="132.0" prefWidth="463.0" promptText="Comentario">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXTextArea>
-                  <TextField fx:id="txf_crearComRut" alignment="CENTER" layoutX="871.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="Ruta">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="txf_crearComBus" alignment="CENTER" layoutX="556.0" layoutY="180.0" prefHeight="35.0" prefWidth="168.0" promptText="Bus">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <JFXButton fx:id="btn_upComent" layoutX="497.0" layoutY="590.0" onAction="#onMenuButtonClick" prefHeight="91.0" prefWidth="287.0" style="-fx-background-color: #174020;" text="Subir Receta" textFill="WHITE">
+                  <JFXButton fx:id="btn_buscarRecetas" layoutX="515.0" layoutY="360.0" prefHeight="67.0" prefWidth="250.0" style="-fx-background-color: #174020;" text="Buscar recetas" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
-                    </children>
-                </Pane>
-                <Pane fx:id="pnl_calServ" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
-                    <children>
-                        <JFXButton fx:id="atras1" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
-                            <graphic>
-                                <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@download.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </JFXButton>
-                  <TextField fx:id="txf_calID" layoutX="402.0" layoutY="89.0" prefHeight="59.0" prefWidth="233.0" promptText="ID de la calificacion">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <JFXRadioButton fx:id="rbtn_valPos" layoutX="428.0" layoutY="248.0" prefHeight="35.0" prefWidth="207.0" text="Valorar Positivo">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXRadioButton>
-                  <JFXRadioButton fx:id="rbtn_valNeg" layoutX="680.0" layoutY="248.0" prefHeight="35.0" prefWidth="207.0" text="Valorar Negativo">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXRadioButton>
-                  <JFXButton fx:id="btn_upValCom1" layoutX="534.0" layoutY="548.0" onAction="#onMenuButtonClick" prefHeight="67.0" prefWidth="233.0" style="-fx-background-color: #174020;" text="Subir Valoracion" textFill="WHITE">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <TextField fx:id="txf_comID11" layoutX="680.0" layoutY="89.0" prefHeight="59.0" prefWidth="233.0" promptText="ID del comentario">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <JFXTextArea fx:id="txa_comVal" layoutX="382.0" layoutY="301.0" prefHeight="227.0" prefWidth="536.0" promptText="Comentario">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXTextArea>
-                    </children>
-                </Pane>
-                <Pane fx:id="pnl_recetas" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
-                    <children>
-                        <JFXButton fx:id="atras11111" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
-                            <graphic>
-                                <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@download.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </JFXButton>
-                  <TextField fx:id="txf_comID" layoutX="524.0" layoutY="218.0" prefHeight="59.0" prefWidth="233.0" promptText="ID del comentario">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <JFXRadioButton fx:id="rbtn_comPos" layoutX="421.0" layoutY="380.0" prefHeight="35.0" prefWidth="207.0" text="Comentario Positivo">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXRadioButton>
-                  <JFXRadioButton fx:id="rbtn_comNeg" layoutX="673.0" layoutY="380.0" prefHeight="35.0" prefWidth="207.0" text="Comentario Negativo">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXRadioButton>
-                  <JFXButton fx:id="btn_upValCom" layoutX="524.0" layoutY="458.0" onAction="#onMenuButtonClick" prefHeight="67.0" prefWidth="233.0" style="-fx-background-color: #174020;" text="Subir Valoracion">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXTextArea fx:id="txa_valCom" editable="false" layoutX="409.0" layoutY="531.0" />
+                  <JFXTextArea fx:id="txa_consRut" editable="false" layoutX="408.0" layoutY="480.0" />
                     </children>
                 </Pane>
                 <Pane fx:id="pnl_progRut" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
@@ -169,9 +111,9 @@
                   <JFXTextArea fx:id="txa_progRut" editable="false" layoutX="408.0" layoutY="519.0" />
                     </children>
                 </Pane>
-                <Pane fx:id="pnl_consRut" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
+                <Pane fx:id="pnl_recetas" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
                     <children>
-                        <JFXButton fx:id="atras11" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="108.0" prefWidth="126.0" text=" ">
+                        <JFXButton fx:id="atras11111" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
                             <graphic>
                                 <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -180,12 +122,75 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                  <JFXButton fx:id="btn_buscarRecetas" layoutX="515.0" layoutY="360.0" prefHeight="67.0" prefWidth="250.0" style="-fx-background-color: #174020;" text="Buscar recetas" textFill="WHITE">
+                  <TextField fx:id="txf_comID" layoutX="524.0" layoutY="218.0" prefHeight="59.0" prefWidth="233.0" promptText="ID del comentario">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXRadioButton fx:id="rbtn_comPos" layoutX="421.0" layoutY="380.0" prefHeight="35.0" prefWidth="207.0" text="Comentario Positivo">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbtn_comNeg" layoutX="673.0" layoutY="380.0" prefHeight="35.0" prefWidth="207.0" text="Comentario Negativo">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXButton fx:id="btn_upValCom" layoutX="524.0" layoutY="458.0" onAction="#onMenuButtonClick" prefHeight="67.0" prefWidth="233.0" style="-fx-background-color: #174020;" text="Subir Valoracion">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
-                  <JFXTextArea fx:id="txa_consRut" editable="false" layoutX="408.0" layoutY="480.0" />
+                  <JFXTextArea fx:id="txa_valCom" editable="false" layoutX="409.0" layoutY="531.0" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pnl_tips" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;">
+                    <children>
+                        <JFXButton fx:id="atras1" layoutX="1.0" layoutY="4.0" onAction="#onMenuButtonClick" prefHeight="75.0" prefWidth="79.0" text=" ">
+                            <graphic>
+                                <ImageView fitHeight="59.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@download.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                  <JFXButton fx:id="btn_refrescarTips" layoutX="426.0" layoutY="590.0" onAction="#onMenuButtonClick" prefHeight="67.0" prefWidth="233.0" style="-fx-background-color: #174020;" text="Refrescar tips" textFill="#e1e1e1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Text fx:id="txt_errorTips" fill="#acda80" layoutX="348.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="539.13671875">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfeb9e" layoutX="213.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La papa se coce mejor si le haces huecos con un tenedor." wrappingWidth="337.13671875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfeb9e" layoutX="213.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recuerda tapar las ollas para que la comida se caliente mejor." wrappingWidth="337.13671875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfeb9e" layoutX="212.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona con la palma de tu mano los limones antes de exprimirlos para sacarles más jugo" wrappingWidth="337.13671875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfeb9e" layoutX="748.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Prepara las vinagretas con antelación." wrappingWidth="337.13671875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfeb9e" layoutX="748.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utiliza un peso de cocina." wrappingWidth="337.13671875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
                     </children>
                 </Pane>
             </children>
